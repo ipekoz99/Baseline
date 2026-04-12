@@ -1,22 +1,23 @@
 import { useState } from 'react'
-import NavBar from './components/NavBar'
-import Dashboard from './screens/Dashboard'
-import Players from './screens/Players'
-import Matches from './screens/Matches'
+import BottomNav from './components/BottomNav'
+import Home from './screens/Home'
+import Profile from './screens/Profile'
+import Settings from './screens/Settings'
 import './App.css'
 
-const SCREENS = { dashboard: Dashboard, players: Players, matches: Matches }
+const SCREENS = { home: Home, profile: Profile, settings: Settings }
 
 export default function App() {
-  const [screen, setScreen] = useState('dashboard')
-  const Screen = SCREENS[screen]
+  const [tab, setTab] = useState('home')
+  const [selectedSection, setSelectedSection] = useState(null)
+  const Screen = SCREENS[tab]
 
   return (
     <div className="app">
-      <NavBar active={screen} onNavigate={setScreen} />
-      <main className="main-content">
-        <Screen />
-      </main>
+      <div className="app-scroll">
+        <Screen onSectionSelect={setSelectedSection} />
+      </div>
+      <BottomNav active={tab} onNavigate={setTab} />
     </div>
   )
 }

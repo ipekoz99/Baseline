@@ -1,1 +1,4 @@
-body { margin: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-tap-highlight-color: transparent; }
+body { background: #070709; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
