@@ -4,12 +4,13 @@ import Home from './screens/Home'
 import Profile from './screens/Profile'
 import Settings from './screens/Settings'
 import Training from './screens/Training'
+import MatchJournal from './screens/MatchJournal'
 import './App.css'
 
 const TAB_SCREENS = { home: Home, profile: Profile, settings: Settings }
 
 // Sections that have a dedicated screen
-const SECTION_SCREENS = { training: Training }
+const SECTION_SCREENS = { training: Training, 'match-journal': MatchJournal }
 
 export default function App() {
   const [tab, setTab]         = useState('home')
