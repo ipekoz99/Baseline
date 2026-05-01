@@ -5,12 +5,32 @@ import Profile from './screens/Profile'
 import Settings from './screens/Settings'
 import Training from './screens/Training'
 import MatchJournal from './screens/MatchJournal'
+import Goals from './screens/Goals'
+import Nutrition from './screens/Nutrition'
+import Recovery from './screens/Recovery'
+import Mental from './screens/Mental'
+import Conditioning from './screens/Conditioning'
+import Tournaments from './screens/Tournaments'
+import RivalAnalysis from './screens/RivalAnalysis'
+import Weather from './screens/Weather'
+import ParentGuide from './screens/ParentGuide'
 import './App.css'
 
 const TAB_SCREENS = { home: Home, profile: Profile, settings: Settings }
 
-// Sections that have a dedicated screen
-const SECTION_SCREENS = { training: Training, 'match-journal': MatchJournal }
+const SECTION_SCREENS = {
+  training:       Training,
+  'match-journal': MatchJournal,
+  goals:          Goals,
+  nutrition:      Nutrition,
+  recovery:       Recovery,
+  mental:         Mental,
+  conditioning:   Conditioning,
+  tournaments:    Tournaments,
+  'rival-analysis': RivalAnalysis,
+  weather:        Weather,
+  'parent-guide': ParentGuide,
+}
 
 export default function App() {
   const [tab, setTab]         = useState('home')
