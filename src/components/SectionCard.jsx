@@ -18,9 +18,15 @@ export default function SectionCard({ section, onClick, variant = 'default' }) {
     )
   }
 
+  const color = section.color ?? 'var(--accent)'
+
   return (
-    <button className="section-card" onClick={onClick}>
-      <div className="card-icon">
+    <button
+      className="section-card"
+      onClick={onClick}
+      style={{ '--c': color }}
+    >
+      <div className="card-icon" style={{ background: `color-mix(in srgb, var(--c) 14%, transparent)`, color: `var(--c)` }}>
         <Icon name={section.icon} size={20} />
       </div>
       <div className="card-label">{section.label}</div>

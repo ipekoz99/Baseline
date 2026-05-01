@@ -17,6 +17,9 @@ const TODAY = new Date().toLocaleDateString('en-US', {
 export default function Home({ onSectionSelect }) {
   return (
     <div className="screen home-screen">
+      {/* Ambient glow */}
+      <div className="home-ambient" aria-hidden="true" />
+
       {/* Header */}
       <header className="home-header">
         <div className="home-header-text">
